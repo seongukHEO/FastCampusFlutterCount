@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: (){
+    ShakeDetector.autoStart(onPhoneShake: (){
       setState(() {
         _counter++;
       });
@@ -102,4 +102,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+  }
 }
+
+
